@@ -1,0 +1,413 @@
+:root {
+  --light: #f5f1ed;
+  --dark: #252323;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 74px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--light);
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.shadow-bg {
+  background-color: var(--dark);
+  transition: background-color 0.3s ease;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 60px;
+  height: 4px;
+  background-color: var(--light);
+}
+
+.nav-wrap {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  width: 100%;
+  color: var(--light);
+  text-transform: uppercase;
+  z-index: 1;
+}
+.nav-wrap .navbar-brand {
+  margin: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--light);
+  font-size: 26px;
+}
+.nav-wrap .burger-menu {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  display: none;
+  font-size: 1.5rem;
+  color: var(--light);
+}
+.nav-wrap .navbar-menu ul {
+  padding: 0;
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+}
+.nav-wrap .navbar-menu li {
+  list-style: none;
+}
+.nav-wrap .navbar-menu li a {
+  text-decoration: none;
+  color: var(--light);
+  padding: 20px;
+  display: block;
+}
+.nav-wrap .nav-link a {
+  transition: color 0.3s;
+}
+.nav-wrap .nav-link a:hover {
+  color: #8b8b8b;
+}
+
+.hero-img {
+  position: relative;
+  height: 100vh;
+  background-image: url(../img/hero-img-small.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.hero-img h1 {
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.hero-img h1 + p {
+  padding: 10px;
+}
+.hero-img .hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -5;
+}
+.hero-img .hero-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  color: var(--light);
+}
+.hero-img .hero-text h1 {
+  font-size: 48px;
+}
+.hero-img .hero-text p {
+  font-size: 20px;
+}
+.hero-img .btn-aboutus {
+  position: absolute;
+  text-decoration: none;
+  color: var(--light);
+  padding: 8px 20px;
+  border: 1px solid var(--light);
+  border-radius: 5px;
+  bottom: 100px;
+  transition: background-color 0.6s;
+}
+.hero-img .btn-aboutus:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+.hero-img a i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  font-size: 30px;
+  color: var(--light);
+}
+
+.aboutus {
+  background-color: var(--dark);
+  background-color: var(--light);
+  color: var(--dark);
+}
+.aboutus .aboutus-wrap .underline {
+  background-color: var(--dark);
+}
+.aboutus .aboutus-wrap p {
+  margin-bottom: 40px;
+  padding: 20px 0;
+  line-height: 1.6;
+}
+.aboutus .aboutus-wrap .container-about-us-main {
+  display: flex;
+  margin-bottom: 40px;
+}
+.aboutus .aboutus-wrap .container-about-us-main .img-aboutus-main {
+  max-width: 55%;
+  height: auto;
+  margin-right: 60px;
+  border-radius: 20px;
+}
+.aboutus .aboutus-wrap .container-about-us-main .text-aboutus-main .section-title-aboutus {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.aboutus .section-aboutus-details {
+  color: var(--light);
+}
+.aboutus .section-aboutus-details .details-hero-img {
+  position: relative;
+  background-image: url(../img/details-small.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.aboutus .section-aboutus-details .hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.527);
+  z-index: -5;
+}
+.aboutus .section-aboutus-details ul {
+  list-style-position: outside;
+  margin-left: 20px;
+}
+.aboutus .section-aboutus-details .underline {
+  background-color: var(--light);
+}
+.aboutus .section-aboutus-details hr {
+  margin-top: 20px;
+}
+.aboutus .section-aboutus-details .items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+.aboutus .section-aboutus-details .item-details {
+  width: 22%;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgba(37, 35, 35, 0.8156862745);
+  box-shadow: 20px 19px 19px 0px rgb(37, 35, 35);
+}
+.aboutus .section-aboutus-details .item-details p {
+  padding: 0;
+  margin: 0;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+.aboutus .section-aboutus-terms {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutus .section-aboutus-terms .section-title {
+  font-size: 24px;
+  color: var(--light);
+}
+.aboutus .section-aboutus-terms .underline {
+  width: 50px;
+  height: 2px;
+  background-color: var(--dark);
+  margin: 10px auto;
+}
+.aboutus .section-aboutus-terms .section-title-aboutus {
+  font-size: 26px;
+  color: var(--light);
+  margin-top: 20px;
+  text-align: center;
+}
+.aboutus .section-aboutus-terms p {
+  padding: 40px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--light);
+  text-align: center;
+}
+.aboutus .section-aboutus-terms span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.aboutus .section-aboutus-terms a {
+  color: #007bff;
+  text-decoration: none;
+}
+.aboutus .section-aboutus-terms a:hover {
+  text-decoration: underline;
+}
+.aboutus .section-aboutus-terms .fa-solid {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: var(--dark);
+}
+.aboutus .section-aboutus-terms .card-terms {
+  background-color: var(--dark);
+  padding: 0 20px;
+  width: 60%;
+  margin: 50px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 24px 0px rgb(37, 35, 35);
+}
+
+footer {
+  height: 100px;
+  background-color: var(--dark);
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    background-image: url(../img/hero-img-big.jpg);
+  }
+  .aboutus .section-aboutus-details .details-hero-img {
+    background-image: url(../img/details-big.jpg);
+  }
+}
+@media (max-width: 667px) {
+  .hero-img .hero-text h1 {
+    font-size: 36px;
+  }
+  .hero-img .hero-text p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1200px) {
+  .aboutus .section-aboutus-details .item-details {
+    width: 47%;
+  }
+}
+@media (max-width: 992px) {
+  .aboutus .aboutus-wrap .container-about-us-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutus .aboutus-wrap .container-about-us-main .img-aboutus-main {
+    max-width: 90%;
+    margin-bottom: 60px;
+  }
+  .aboutus .aboutus-wrap .container-about-us-main .text-aboutus-main .section-title-aboutus {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar .nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .burger-menu {
+    display: flex;
+  }
+  .navbar .navbar-menu ul {
+    flex-direction: column;
+  }
+  .navbar .navbar-menu ul li {
+    padding: 15px;
+    transition: background-color 0.3s;
+  }
+  .navbar .navbar-menu ul li a {
+    padding: 0;
+  }
+  .navbar .navbar-menu li:hover {
+    background-color: #575757;
+  }
+  .navbar .navbar-menu.active {
+    display: flex;
+  }
+  .navbar .navbar-menu ul li:last-child {
+    margin-bottom: 20px;
+  }
+  .aboutus .aboutus-wrap .aboutus-main-text {
+    margin: 20px 20px;
+  }
+  .aboutus .aboutus-wrap .container-about-us-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutus .aboutus-wrap .container-about-us-main .img-aboutus-main {
+    max-width: 90%;
+    height: auto;
+    margin-right: 0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  .aboutus .aboutus-wrap .container-about-us-main .text-aboutus-main .section-title-aboutus {
+    margin: 20px 20px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .aboutus .aboutus-wrap .container-about-us-main .text-aboutus-main p {
+    margin: 20px 20px;
+    padding: 0;
+  }
+  .aboutus .section-aboutus-details .item-details {
+    width: 100%;
+  }
+  .aboutus .section-aboutus-terms .card-terms {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
