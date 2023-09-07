@@ -1,6 +1,7 @@
 :root {
 	--light: #f5f1ed;
 	--dark: #252323;
+	--blue: #007399;
 }
 
 * {
@@ -42,7 +43,7 @@ body {
 }
 
 .shadow-bg {
-	background-color: var(--dark);
+	background-color: var(--blue);
 	transition: background-color 0.3s ease;
 }
 
@@ -117,7 +118,7 @@ body {
 .hero-img {
 	position: relative;
 	height: 100vh;
-	background-image: url(../img/hero-img-small.jpg);
+	background-image: url(../img/wave-hero-img.svg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -125,7 +126,7 @@ body {
 
 	h1 {
 		text-transform: uppercase;
-		font-weight: 100;
+		font-weight: bold;
 	}
 
 	h1 + p {
@@ -138,7 +139,7 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgb(0, 0, 0, 0.8);
+		background-color: rgba(0, 0, 0, 0);
 		z-index: -5;
 	}
 
@@ -147,6 +148,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		font-weight: bold;
 		height: 100%;
 		color: var(--light);
 		h1 {
@@ -184,14 +186,30 @@ body {
 }
 
 .aboutus {
-	background-color: var(--dark);
-	background-color: var(--light);
+	background-image: url("/img/blob-scene-haikei.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	color: var(--dark);
 	.aboutus-wrap {
-		.underline {
-			background-color: var(--dark);
+
+		.section-aboutus-main{
+			padding: 40px;
 		}
+
+		.section-title{
+			padding-top: 50px;
+			font-size: 2.5rem;
+			color: var(--blue);
+		}
+
+		.underline{
+			background-color: var(--blue);
+		}
+		
 		p {
+			font-weight: bold;
 			margin-bottom: 40px;
 			padding: 20px 0;
 			line-height: 1.6;
@@ -211,6 +229,7 @@ body {
 
 			.text-aboutus-main {
 				.section-title-aboutus {
+					color: var(--blue);
 					text-transform: uppercase;
 					font-size: 30px;
 				}
@@ -345,7 +364,7 @@ footer {
 
 @media (min-width: 768px) {
 	.hero-img {
-		background-image: url(../img/hero-img-big.jpg);
+		background-image: url(../img/wave-hero-img.svg);
 	}
 	.aboutus {
 		.section-aboutus-details {
